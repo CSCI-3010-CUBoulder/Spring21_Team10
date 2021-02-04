@@ -1,4 +1,7 @@
 /* String functions section */
+std::string FirstAddedFunc(std::string s1, std::string s2);
+
+std::vector<std::string> SecondAddedFunc(std::string whole, std::string separator);
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
