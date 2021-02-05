@@ -1,9 +1,4 @@
-#include<string>
-#include<vector>
 /* String functions section */
-std::string FirstAddedFunc(std::string s1, std::string s2);
-
-std::vector<std::string> SecondAddedFunc(std::string whole, std::string separator);
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -37,8 +32,24 @@ std::vector<bool> OddMask(std::vector<int>);
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums);
 
+int Sum(std::vector<int> nums){
+  int sum = 0;
+  for(int i=0; i<nums.size(); i++){
+    sum += nums[i];
+  }
+  return sum;
+}
+
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums);
+
+int Product(std::vector<int> nums){
+  int prod = 0;
+  for(int i=0; i<nums.size(); i++){
+    prod *= nums[i];
+  }
+  return prod;
+}
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n);
@@ -57,23 +68,10 @@ std::vector<int> SquaresUntil(int n);
 int NthFibonacci(int n);
 
 // takes an int, n, and returns the factorial of that int (n!)
-int Factorial(int n){
-    if(n > 1){
-        return n*Factorial(n-1);
-    }
-    return 1;
-}
+int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num){
-    if(num<0){
-        return -1;
-    }
-    if(num>0){
-        return 1;
-    }
-    return 0;
-}
+int Sign(int num);
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
