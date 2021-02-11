@@ -1,4 +1,5 @@
 /* String functions section */
+
 std::string FirstAddedFunc(std::string s1, std::string s2);
 
 std::vector<std::string> SecondAddedFunc(std::string whole, std::string separator);
@@ -58,8 +59,14 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num);
-
+int Sign(int num){
+	if(num<0){
+		return -1;
+	}
+	else{
+		return 1;
+	}
+}
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
 std::vector<double> MatchVectors(std::vector<double> a, std::vector<double> b);
